@@ -1,0 +1,56 @@
+//
+// Prefix header for all source files of the 'AGSPadViewer' target in the 'AGSPadViewer' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+//UI元素
+#define MENU_LOGO_HEIGHT 100.f
+#define MENU_ORIGIN_X 12.f
+#define MENU_ORIGIN_Y 115.f
+//#define MENU_WIDTH 71.f
+#define MENU_WIDTH 89.f
+#define MENU_HEIGHT 364.f
+#define MENU_CELL_WIDTH 87.f//70.f
+#define MENU_SLIDING NO
+#define MENU_BACKGROUNDCOLOR [UIColor colorWithRed:241.0/255 green:241.0/255 blue:241.0/255 alpha:1.0]
+#define MENU_FONT [UIFont systemFontOfSize:12.0]
+
+#define WIDGET_LEFT_VIEW_WIDTH  240.f
+#define WIDGET_LEFT_VIEW_HEIGHT 600.f
+#define WIDGET_TOOLBARTINTCOLOR [UIColor colorWithRed:241.0/255 green:241.0/255 blue:241.0/255 alpha:1.0]
+#define WIDGET_BACKGROUNDCOLOR [UIColor colorWithWhite:1.0 alpha:.7]
+#define WIDGET_TITLEFONT [UIFont boldSystemFontOfSize:18.0]
+#define WIDGET_DIVIDERCOLOR [UIColor colorWithRed:181.0/255 green:181.0/255 blue:181.0/255 alpha:1.0]
+#define WIDGET_CONTENTFONTSIZE 14.f
+#define WIDGET_CONTENTFONT [UIFont systemFontOfSize:16.f]
+#define WIDGET_CONTENTCELLBACKGROUNDCOLOR [UIColor clearColor]
+
+#define TOOLBAR_WIDTH 100.f
+//功能宏
+//获取设备的系统版本
+#define iOSVersion [[UIDevice currentDevice].systemVersion floatValue]
+
+#define isRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960),[[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136),[[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//rgb颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+//设置颜色RGB
+#define COLOR(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+
+//the name of collect data layer
+#define kLAYERNAME_DRAWGRAPHIC @"drawGraLayer"

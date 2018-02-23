@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<configuration>
+     <map wraparound180="true" initialextent="10731970.0494 4417945.3028 14011863.5886 7101494.5621" fullextent="-20000000 -20000000 20000000 20000000" >
+        <basemaps>
+            <layer label="内蒙区域全图" type="localTiled" visible="true" icon="gray-thumb.jpg"
+            url="/data/切片图层/nmsl.tpk"/>
+        </basemaps>
+        <tiledlayers>
+            <!--
+            <layer label="圣地亚哥市街道底图-离线" type="localTiled" visible="true" alpha="1.0"
+            url="/data/切片图层/sandiego_basemap.tpk"/>
+             -->
+        </tiledlayers>
+        <operationallayers>
+            <!--
+             <layer label="国界与省界" type="localFeature" visible="true" alpha="0.3"
+            url="/data/矢量图层/中国400万数据.geodatabase/国界与省界4p"/>
+             -->
+        </operationallayers>
+    </map>
+    <widgetcontainer >
+        <widget label="世界" title="世界地图集" classname="WorldAtlasWidget"  bundle="WorldAtlasWidget"
+        icon="WorldAtlasWidget.png"
+        config="WorldAtlasWidget.xml"/>
+        <widget label="中国" title="中国地图集" classname="ChinaAtlasWidget"   bundle="ChinaAtlasWidget"
+        icon="ChinaAtlasWidget.png"
+        config="ChinaAtlasWidget.xml"/>
+        <widget label="内蒙" title="内蒙地图集" classname="NMAtlasWidget"   bundle="NMAtlasWidget"
+        icon="NMAtlasWidget.png"
+        config="NMAtlasWidget.xml"/>
+        <widget label="导航" title="区域导航" classname="BookmarkWidget"   bundle="BookmarkWidget"
+        icon="BookmarkWidget.png"
+        config="BookmarkWidget.xml"/>
+    </widgetcontainer>
+</configuration>

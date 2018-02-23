@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<configuration label="Bookmarks (example)">
+    <bookmarks>
+        <bookmark name="中国">6094486.282593 558463.883840 16025796.520620 7812975.659273</bookmark>
+        <bookmark name="中国•华北地区">12184871.206804 4425682.883872 13303092.157357 5242508.343846</bookmark>
+        <bookmark name="中国•北京市">12842509.598127 4802265.843213 13011696.769843 4925851.785053</bookmark>
+        <bookmark name="美国•加州•圣地亚哥市">-13075026.158449 3833184.380902 -13023299.071724 3870969.401283</bookmark>
+    </bookmarks>
+</configuration>
+
+
