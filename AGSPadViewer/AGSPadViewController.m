@@ -74,7 +74,8 @@
 {
     [super viewDidLoad];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [self prefersStatusBarHidden];
     
     UIInterfaceOrientation orientation = self.interfaceOrientation;
     if( orientation == UIInterfaceOrientationPortrait||orientation == UIInterfaceOrientationPortraitUpsideDown)
@@ -111,6 +112,9 @@
     [AppEvent addListener:self selector:@selector(toolbarVisuable:) name:TOOLBAR_ACTIVE object:nil];
     
     
+    NSURL* url = [NSURL URLWithString:@"https://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer"];
+    AGSTiledMapServiceLayer *tiledLayer = [AGSTiledMapServiceLayer tiledMapServiceLayerWithURL:url];
+    [self.mapView addMapLayer:tiledLayer withName:@"Basemap Tiled Layer"];
        /*
      //set Runtime's license
      [self setLicense];
@@ -1557,6 +1561,10 @@
             [self.mapView removeMapLayer:mapLayer];
         }
     }
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end

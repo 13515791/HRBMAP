@@ -54,6 +54,7 @@
 - (NSString *)DBfilePath;
 -(void)ShowMessageViewControllerWasDismissed: (ShowMessageViewController *)showMessageViewController;
 -(void)DistanceUnitMap:(id)sender;
+-(BOOL)prefersStatusBarHidden;
 @property (nonatomic, strong) AGSMapView *mapView;
 @property (nonatomic, strong) UIButton *basemapBtn;
 @property (nonatomic, strong) UIButton *locationBtn;

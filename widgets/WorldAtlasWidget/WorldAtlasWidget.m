@@ -218,6 +218,9 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.font = WIDGET_CONTENTFONT;
         cell.backgroundColor = WIDGET_CONTENTCELLBACKGROUNDCOLOR;
+        
+        UISwitch *sw=[[UISwitch alloc]init];
+        cell.accessoryView=sw;
     }
     if(indexPath.section==0)
         //设置单元格的字符串内容

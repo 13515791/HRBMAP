@@ -35,6 +35,7 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
+    [UIApplication sharedApplication].statusBarHidden = YES;
 }
 -(void)logAppStatus:(NSString *)status{
     if (!_logPath){
